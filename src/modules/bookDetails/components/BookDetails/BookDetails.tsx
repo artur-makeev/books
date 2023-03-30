@@ -6,14 +6,15 @@ import { Context } from '@/pages/_app';
 import { showAllCategory } from '../../helpers/showAllCategory';
 import { useValidateLargeImage } from '../../hooks/useValidateLargeImage';
 import { useValidateBook } from '../../hooks/useValidateBook';
+import { addHTTPS } from '../../../../helpers/addHTTPS';
 
 export const BookDetails = () => {
 	const { books } = useContext(Context);
 
 	const myLoader = ({ src, width, quality }: ImageLoaderProps) =>
-		`${
-			books.selectedBook.volumeInfo?.imageLinks?.thumbnail
-		}/${src}?w=${width}&q=${quality || 75}`;
+		`${addHTTPS(
+			books.selectedBook.volumeInfo?.imageLinks?.thumbnail as string
+		)}/${src}?w=${width}&q=${quality || 75}`;
 
 	useValidateBook();
 
@@ -33,9 +34,9 @@ export const BookDetails = () => {
 							loader={myLoader}
 							fill
 							alt={books.selectedBook.volumeInfo.title}
-							src={
+							src={addHTTPS(
 								books.selectedBook.volumeInfo?.imageLinks?.thumbnail as string
-							}
+							)}
 						/>
 					) : (
 						<div className={styles.imageBlank} />

@@ -9,15 +9,16 @@ import { Context } from '@/pages/_app';
 import { useRouter } from 'next/router';
 import { truncate } from '../../helpers/truncate';
 import { useValidateSmallImage } from '../../hooks/useValidateSmallImage';
+import { addHTTPS } from '@/helpers/addHTTPS';
 
 export const BookCard = ({ book }: BookCardProps) => {
 	const router = useRouter();
 	const { books } = useContext(Context);
 
 	const myLoader = ({ src, width, quality }: ImageLoaderProps) =>
-		`${book.volumeInfo?.imageLinks?.smallThumbnail}/${src}?w=${width}&q=${
-			quality || 75
-		}`;
+		`${addHTTPS(
+			book.volumeInfo?.imageLinks?.smallThumbnail as string
+		)}/${src}?w=${width}&q=${quality || 75}`;
 
 	const openBookDetails = () => {
 		books.setSelectedBook(book);
@@ -36,7 +37,9 @@ export const BookCard = ({ book }: BookCardProps) => {
 						width={128}
 						height={205}
 						alt={book.volumeInfo.title}
-						src={book.volumeInfo?.imageLinks?.smallThumbnail || ''}
+						src={addHTTPS(
+							book.volumeInfo?.imageLinks?.smallThumbnail as string
+						)}
 					/>
 				) : (
 					<div className={styles.imageBlank} />
