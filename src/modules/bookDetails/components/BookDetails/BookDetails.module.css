@@ -1,0 +1,90 @@
+.container {
+	width: 100vw;
+	display: flex;
+}
+
+.imageBlock {
+	background-color: #F3F2F1;
+	width: 40vw;
+	height: calc(100vh - 260px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imageContainer {
+	position: relative;
+	width: 303px;
+	height: 486px;
+}
+
+.image {
+	box-shadow: 10px 10px 15px #B5B4B3;
+}
+
+.imageBlank {
+	box-shadow: 10px 10px 15px #B5B4B3;
+	width: 303px;
+	height: 486px;
+	background-color: #ffff;
+}
+
+.descriptionBlock {
+	width: 60vw;
+	padding: 60px;
+}
+
+.category {
+	font-weight: 300;
+	margin-bottom: 35px;
+}
+
+.title {
+	font-weight: 600;
+	font-size: 30px;
+	margin-bottom: 16px;
+}
+
+.author {
+	color: #A2A2A1;
+	text-decoration: underline;
+	margin-bottom: 30px;
+}
+
+.description {
+	border: 1px solid #E1E1E1;
+	min-height: 250px;
+	padding: 15px;
+	font-weight: 500;
+	font-size: 18px;
+}
+
+@media screen and (max-width: 850px) {
+	.container{
+		flex-direction: column;
+	}
+
+	.descriptionBlock {
+		width: 100vw;
+	}
+
+	.imageBlock {
+		width: 100vw;
+		height: 230px;
+	}
+	
+	.imageContainer {
+		width: 128px;
+		height: 205px;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.descriptionBlock {
+		padding: 20px;
+	}
+
+	.title {
+		font-size: 24px;
+	}
+}

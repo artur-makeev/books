@@ -1,0 +1,37 @@
+.container {
+	margin: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+	width: 1660px;
+}
+
+.spinnerContainer {
+	display: flex;
+	justify-content: center;
+	width: 100vw;
+}
+
+@media screen and (max-width: 1660px) {
+	.container {
+		width: 1320px;
+	}
+}
+
+@media screen and (max-width: 1370px) {
+	.container {
+		width: 980px;
+	}
+}
+
+@media screen and (max-width: 1040px) {
+	.container {
+		width: 640px;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.container {
+		width: 300px;
+	}
+}

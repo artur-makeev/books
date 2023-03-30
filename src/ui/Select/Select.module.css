@@ -1,0 +1,21 @@
+.select {
+	background-color: #FFF;
+	border-radius: 0;
+	width: 250px;
+	height: 40px;
+	border: none;
+	color: #797069;
+	font-size: 20px;
+	font-weight: 500;
+	font-family: inherit;
+}
+
+.select:focus {
+	outline: none;
+}
+
+.label {
+	color: #FAFAF3;
+	margin-right: 10px;
+	font-size: 18px;
+}

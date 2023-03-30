@@ -1,0 +1,46 @@
+.container {
+	height: 260px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.mainHeading {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.filters {
+	display: flex;
+	gap: 30px;
+}
+
+@media screen and (max-width: 790px) {
+	.selects {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.search {
+		width: 70vw;
+	}
+
+	.mainHeading {
+		font-size: 30px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 790px) {
+	.filters {
+		flex-direction: column;
+		gap: 5px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.search {
+		width: 250px;
+	}
+}
