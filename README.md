@@ -22,3 +22,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Demo is hosted at:
 
 [https://books-rosy.vercel.app/](https://books-rosy.vercel.app/)
+
+## Задача
+
+Сделать сайт для поиска книг с google books api.
+Реализовать фильтрацию по категориям: искусство, биографии, компьютеры, история, медицина, поэзия.
+Реализовать сортировку по relevance и дате.
+Использовать typescript, react, redux.
+
